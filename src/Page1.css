@@ -1,0 +1,162 @@
+.page1 {
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.light-mode .page1 {
+  background-color: white;
+}
+
+/* GRID LAYOUT */
+.fisheye-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 360px);
+  grid-auto-rows: 360px;
+  gap: 2rem;
+  justify-content: center;
+  align-items: start;
+}
+
+/* ITEMS */
+.fisheye {
+  position: relative;
+  cursor: pointer;
+}
+
+/* IMAGE default */
+.fisheye img {
+  width: 360px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s ease, border-color 0.5s ease, opacity 0.5s ease, box-shadow 0.3s ease;
+  opacity: 0.8;
+}
+
+.light-mode .fisheye img {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* VIDEO FIX — make it circular and full-size */
+.fisheye-video {
+  width: 360px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  z-index: 5;
+  opacity: 1;
+  display: block;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.light-mode .fisheye-video {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* HOVER effect for images only */
+.fisheye:hover img {
+  transform: scale(1.1);
+  border-color: rgba(96, 165, 250, 0.6);
+  opacity: 1;
+}
+
+/* GLOW EFFECT */
+.glow-effect {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(96, 165, 250, 0.4) 0%, transparent 70%);
+  filter: blur(20px);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: -1;
+}
+
+.fisheye:hover .glow-effect {
+  opacity: 0.4;
+}
+
+/* ⛔ FIX: Prevent stagger from affecting the center video */
+.fisheye.stagger {
+  margin-top: 180px;
+}
+
+/* apply stagger only to images */
+.fisheye:not(.center-item):nth-child(5n+2),
+.fisheye:not(.center-item):nth-child(5n+4) {
+  margin-top: 180px;
+}
+
+/* ----------------- RESPONSIVE ------------------ */
+
+@media (max-width: 1024px) {
+  .fisheye-grid {
+    grid-template-columns: repeat(4, 270px);
+    grid-auto-rows: 270px;
+    gap: 1.5rem;
+  }
+
+  .fisheye img,
+  .fisheye-video {
+    width: 270px;
+    height: 270px;
+  }
+
+  .fisheye:not(.center-item):nth-child(5n+2),
+  .fisheye:not(.center-item):nth-child(5n+4) {
+    margin-top: 135px;
+  }
+}
+
+@media (max-width: 768px) {
+  .fisheye-grid {
+    grid-template-columns: repeat(3, 180px);
+    grid-auto-rows: 180px;
+    gap: 1rem;
+  }
+
+  .fisheye img,
+  .fisheye-video {
+    width: 180px;
+    height: 180px;
+  }
+
+  .fisheye:not(.center-item):nth-child(5n+2),
+  .fisheye:not(.center-item):nth-child(5n+4) {
+    margin-top: 90px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fisheye-grid {
+    grid-template-columns: repeat(2, 120px);
+    grid-auto-rows: 120px;
+    gap: 0.8rem;
+  }
+
+  .fisheye img,
+  .fisheye-video {
+    width: 120px;
+    height: 120px;
+  }
+
+  .fisheye:not(.center-item):nth-child(5n+2),
+  .fisheye:not(.center-item):nth-child(5n+4) {
+    margin-top: 60px;
+  }
+}
