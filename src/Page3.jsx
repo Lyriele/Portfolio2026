@@ -32,7 +32,7 @@ export default function Page3() {
       tags: ['React', 'Three.js'],
       description: 'An interactive learning platform I built to strengthen my understanding of shell scripting by restructuring course material into a more practical, hands-on format. Developed with React and enhanced with Three.js for visual engagement.',
       websiteUrl: 'https://shell-scriptingweb.firebaseapp.com/',
-      modelUrl: '/models/ShellScriptWeb2.glb'
+      modelUrl: './models/ShellScriptWeb2.glb'
     },
     {
       id: 2,
@@ -40,7 +40,7 @@ export default function Page3() {
       tags: ['JavaScript', 'HTML/CSS', '3d Model'],
       description: 'My second web project, built to practice multi-page layouts, basic animations, and visual design. The site integrated my first Blender 3D model. I remade it in 2026 to improve the layout and information.',
       websiteUrl: 'https://lyriele.github.io/Fruit-2026/',
-      modelUrl: '/models/Fruitsblend.glb'
+      modelUrl: './models/Fruitsblend.glb'
     },
     {
       id: 3,
@@ -48,7 +48,7 @@ export default function Page3() {
       tags: ['React', 'JavaScript', 'UI/UX'],
       description: 'I am developing a genealogy app that lets families digitize their history. I have built out the client and server sides to support functional user accounts, focusing on making it easy to save stories and organize old family photos in one place.',
       websiteUrl: null,
-      modelUrl: '/models/UnderConstructionglb.glb'
+      modelUrl: './models/UnderConstructionglb.glb'
     },
   ];
 

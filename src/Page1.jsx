@@ -11,7 +11,7 @@ export default function Page1() {
           <div className="glow-effect"></div>
           <video
             className="fisheye-video"
-            src="/videos/FishEyeRova.mp4"
+            src="./videos/FishEyeRova.mp4"
             autoPlay
             loop
             muted
@@ -23,7 +23,7 @@ export default function Page1() {
           <div className="glow-effect"></div>
           <video
             className="fisheye-video"
-            src="/videos/BloomCatsFishEye.mp4"
+            src="./videos/BloomCatsFishEye.mp4"
             autoPlay
             loop
             muted
@@ -35,7 +35,7 @@ export default function Page1() {
           <div className="glow-effect"></div>
           <video
             className="fisheye-video"
-            src="/videos/FishEyeFlora.mp4"
+            src="./videos/FishEyeFlora.mp4"
             autoPlay
             loop
             muted
@@ -48,7 +48,7 @@ export default function Page1() {
           <div className="glow-effect"></div>
           <video
             className="fisheye-video"
-            src="/videos/FishEyeGlobe.mp4"
+            src="./videos/FishEyeGlobe.mp4"
             autoPlay
             loop
             muted
@@ -60,7 +60,7 @@ export default function Page1() {
           <div className="glow-effect"></div>
           <video
             className="fisheye-video"
-            src="/videos/FishEyeChampagne2.mp4"
+            src="./videos/FishEyeChampagne2.mp4"
             autoPlay
             loop
             muted
@@ -72,7 +72,7 @@ export default function Page1() {
           <div className="glow-effect"></div>
           <video
             className="fisheye-video"
-            src="/videos/FishEyeCreativeMinds.mp4"
+            src="./videos/FishEyeCreativeMinds.mp4"
             autoPlay
             loop
             muted
@@ -85,7 +85,7 @@ export default function Page1() {
           <div className="glow-effect"></div>
           <video
             className="fisheye-video"
-            src="/videos/FlowerTwistFishEye.mp4"
+            src="./videos/FlowerTwistFishEye.mp4"
             autoPlay
             loop
             muted
@@ -97,7 +97,7 @@ export default function Page1() {
           <div className="glow-effect"></div>
           <video
             className="fisheye-video"
-            src="/videos/BluePoolName.mp4"
+            src="./videos/BluePoolName.mp4"
             autoPlay
             loop
             muted
@@ -105,12 +105,11 @@ export default function Page1() {
           />
         </div>
 
-        {/* ✅ Image 8 replaced here */}
         <div className="fisheye">
           <div className="glow-effect"></div>
           <video
             className="fisheye-video"
-            src="/videos/FisheyeBeach.mp4"
+            src="./videos/FisheyeBeach.mp4"
             autoPlay
             loop
             muted
@@ -123,7 +122,7 @@ export default function Page1() {
           <div className="glow-effect"></div>
           <video
             className="fisheye-video"
-            src="/videos/FishEyeTrain.mp4"
+            src="./videos/FishEyeTrain.mp4"
             autoPlay
             loop
             muted
@@ -135,7 +134,7 @@ export default function Page1() {
           <div className="glow-effect"></div>
           <video
             className="fisheye-video"
-            src="/videos/BlowUpFishEye.mp4"
+            src="./videos/BlowUpFishEye.mp4"
             autoPlay
             loop
             muted
@@ -147,7 +146,7 @@ export default function Page1() {
           <div className="glow-effect"></div>
           <video
             className="fisheye-video"
-            src="/videos/LadyBugFishEye.mp4"
+            src="./videos/LadyBugFishEye.mp4"
             autoPlay
             loop
             muted
@@ -161,7 +160,7 @@ export default function Page1() {
           <div className="glow-effect"></div>
           <video
             className="fisheye-video"
-            src="/videos/LadyBugFishEye.mp4"
+            src="./videos/LadyBugFishEye.mp4"
             autoPlay
             loop
             muted
@@ -173,7 +172,7 @@ export default function Page1() {
           <div className="glow-effect"></div>
           <video
             className="fisheye-video"
-            src="/videos/RingTwistFishEye.mp4"
+            src="./videos/RingTwistFishEye.mp4"
             autoPlay
             loop
             muted
@@ -185,7 +184,7 @@ export default function Page1() {
           <div className="glow-effect"></div>
           <video
             className="fisheye-video"
-            src="/videos/RingTwistFishEye.mp4"
+            src="./videos/RingTwistFishEye.mp4"
             autoPlay
             loop
             muted

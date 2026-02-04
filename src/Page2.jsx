@@ -265,7 +265,7 @@ export default function Page2() {
       id: 'bloom-1',
       title: 'Alstroemeria Cat',
       type: 'image',
-      url: '/cats/AlCat3.png',
+      url: './cats/AlCat3.png',
       series: 'Bloom Cats',
       previewScale: 0.8,
       scale: 1.5
@@ -274,7 +274,7 @@ export default function Page2() {
       id: 'bloom-2',
       title: 'Orchid Cat',
       type: 'image',
-      url: '/cats/OrchidCat2.png',
+      url: './cats/OrchidCat2.png',
       series: 'Bloom Cats',
       previewScale: 0.8,
       scale: 2
@@ -283,7 +283,7 @@ export default function Page2() {
       id: 'bloom-3',
       title: 'Columbine Cat',
       type: 'image',
-      url: '/cats/ColumbineCat3.png',
+      url: './cats/ColumbineCat3.png',
       series: 'Bloom Cats',
       previewScale: 0.8,
       scale: 1.5
@@ -292,7 +292,7 @@ export default function Page2() {
       id: 'bloom-4',
       title: 'Bloom Cats Animation',
       type: 'video',
-      url: '/videos/BloomCats.mp4',
+      url: './videos/BloomCats.mp4',
       series: 'Bloom Cats',
       previewScale: 0.8,
       scale: 1.5
@@ -301,7 +301,7 @@ export default function Page2() {
       id: 'bloom-5',
       title: 'Pansy Cat',
       type: 'image',
-      url: '/cats/PansyCat2.png',
+      url: './cats/PansyCat2.png',
       series: 'Bloom Cats',
       previewScale: 0.8,
       scale: 1.5
@@ -310,7 +310,7 @@ export default function Page2() {
        id: 'bloom-6',
        title: 'Dahlia Cat',
        type: 'image',
-      url: '/cats/DahliaCat.png',
+      url: './cats/DahliaCat.png',
        series: 'Bloom Cats',
        previewScale: 0.8,
        scale: 1.5
@@ -319,7 +319,7 @@ export default function Page2() {
        id: 'bloom-7',
        title: 'Mushroom Cat',
       type: 'image',
-      url: '/cats/MushroomCat3.png',
+      url: './cats/MushroomCat3.png',
       series: 'Bloom Cats',
       previewScale: 0.8,
       scale: 1.5
@@ -328,7 +328,7 @@ export default function Page2() {
       id: 'bloom-8',
       title: 'Sunflower Cat',
       type: 'image',
-      url: '/cats/SunFlowerCat2.png',
+      url: './cats/SunFlowerCat2.png',
       series: 'Bloom Cats',
       previewScale: 0.8,
       scale: 1.5
@@ -337,7 +337,7 @@ export default function Page2() {
       id: 'bloom-9',
       title: 'Dandelion Cat',
       type: 'image',
-      url: '/cats/DandelionCat.png',
+      url: './cats/DandelionCat.png',
       series: 'Bloom Cats',
       previewScale: 0.8,
       scale: 1.5
@@ -350,7 +350,7 @@ export default function Page2() {
       id: 'name-1',
       title: 'Theo',
       type: 'image',
-      url: '/images/Theo.png',
+      url: './images/Theo.png',
       series: 'Name',
       previewScale: 0.8,
       scale: 1.5
@@ -359,7 +359,7 @@ export default function Page2() {
       id: 'name-2',
        title: 'Cybele',
        type: 'image',
-       url: '/images/Cybele2.png',
+       url: './images/Cybele2.png',
        series: 'Name',
        previewScale: 0.8,
        scale: 1.5
@@ -368,7 +368,7 @@ export default function Page2() {
       id: 'name-3',
        title: 'Norbert',
        type: 'image',
-       url: '/images/Norbert6.png',
+       url: './images/Norbert6.png',
        series: 'Name',
        previewScale: 0.8,
        scale: 1.5
@@ -380,7 +380,7 @@ export default function Page2() {
        id: 'jewels-2',
        title: 'Flora',
        type: 'video',
-       url: '/videos/Flora.mp4',
+       url: './videos/Flora.mp4',
        previewScale: 0.6,
        scale: 1.2
      },
@@ -388,7 +388,7 @@ export default function Page2() {
        id: 'jewels-1',
        title: 'FlowerJewelery',
        type: 'video',
-       url: '/videos/FlowerTwist.mp4',
+       url: './videos/FlowerTwist.mp4',
        previewScale: 0.6,
        scale: 1.2
      },
@@ -396,7 +396,7 @@ export default function Page2() {
        id: 'jewels-1',
        title: 'RingTwist',
        type: 'video',
-       url: '/videos/RingTwist.mp4',
+       url: './videos/RingTwist.mp4',
        previewScale: 0.6,
        scale: 1.2
      },
@@ -408,25 +408,25 @@ export default function Page2() {
       id: 'misc-1',
       title: 'Spinning Globe',
       type: 'video',
-      url: '/videos/Rova.mp4',
+      url: './videos/Rova.mp4',
     },
     {
       id: 'misc-2',
       title: 'Beach Scene',
       type: 'video',
-      url: '/videos/Beach.mp4',
+      url: './videos/Beach.mp4',
     },
     {
       id: 'misc-3',
       title: 'Snow Globe',
       type: 'video',
-      url: '/videos/SnowGlobe.mp4',
+      url: './videos/SnowGlobe.mp4',
     },
     {
       id: 'misc-4',
       title: 'Interactive Room',
       type: 'video',
-      url: '/videos/PoolName.mp4',
+      url: './videos/PoolName.mp4',
       previewScale: 0.6,
       scale: 1.2
     },
@@ -434,7 +434,7 @@ export default function Page2() {
        id: 'misc-5',
        title: 'Flora',
        type: 'video',
-       url: '/videos/Champagne.mp4',
+       url: './videos/Champagne.mp4',
        previewScale: 0.6,
        scale: 1.2
      },
@@ -442,7 +442,7 @@ export default function Page2() {
        id: 'misc-6',
        title: 'Train',
        type: 'video',
-       url: '/videos/TrainImproved.mp4',
+       url: './videos/TrainImproved.mp4',
        previewScale: 0.6,
        scale: 1.2
      },
