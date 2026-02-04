@@ -31,7 +31,7 @@ export default function Page4() {
       icon: 'certification',
       title: 'Certifications',
       items: [
-        { name: 'Computer Programming: C__ Certificate of Achievement', institution: 'San Francisco City College', year: '2025' },
+        { name: 'Computer Programming: C++ Certificate of Achievement', institution: 'San Francisco City College', year: '2025' },
         { name: 'Computer Programming: Java Certificate of Achievement', institution: 'San Francisco City College', year: '2026' },
 
       ]
