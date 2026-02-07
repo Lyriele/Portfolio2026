@@ -86,15 +86,17 @@ export default function Page4() {
             </div>
             <div className="page4-about-text">
               <p className="page4-bio">
-                Hi, I'm a digital artist and creative developer who studied Global studies at 
-                UC Santa Barbara, During the pandemic, I started coding on my own time for fun, 
-                I started with C++ and JavaScript and started experimenting with building my own 
-                websites. Eventually, I wanted to bring more depth to my projects, so I picked up 
-                Blender to create my own visuals. What started as a way to enhance my sites quickly 
-                turned into a passion for 3D modeling, short animations, and digital art. Over the last 
-                few years, I’ve continued learning new languages and focusing on the intersection 
-                of the two: turning my ideas into functional websites and art that actually feels fun to 
-                interact with.
+               Hi, I'm Lyriele, a digital artist and creative developer raised between France and the United States.
+               I studied Global Studies at UC Santa Barbara, but during the pandemic I began teaching myself to code out of curiosity, 
+               starting with HTML/CSS, C++, and JavaScript, then building experimental websites. To bring richer visuals to my projects, 
+               I dove into Blender, and what started as simple enhancements quickly grew into a passion for 3D modeling, short animations, and digital art.
+
+               Over the past year and a half, I backpacked across Ibero-America to immerse myself in new cultures and learn Spanish. Living on the road, 
+               I took programming classes at City College of San Francisco and continued honing my artistic skills. This journey has taught me a lot about 
+               perseverance, cultures and This journey taught me perseverance in the face of hardships and allowed me to experience the beauty in the diverse cultures, 
+               diets, and landscapes of Ibero-America.
+
+               Today, I focus on developing my ideas and experiences through code and digital art.
               </p>
               <p className="page4-bio">
                 Multilingual, curious, and inspired by new places and ideas.              </p>
@@ -131,7 +133,7 @@ export default function Page4() {
                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                   </svg>
                 </a>
-                <a href="./resume.pdf" target="_blank" rel="noopener noreferrer" className="page4-social-button" aria-label="Resume">
+                <a href="./resume2026.pdf" target="_blank" rel="noopener noreferrer" className="page4-social-button" aria-label="Resume">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                     <polyline points="14,2 14,8 20,8"></polyline>

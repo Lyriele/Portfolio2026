@@ -720,3 +720,283 @@
     min-height: 200px;
   }
 }
+
+/* ----------------- MOBILE RESPONSIVE ------------------ */
+
+@media (max-width: 1024px) {
+  .page2 {
+    padding: 5rem 0 3rem;
+  }
+  
+  .page2-title {
+    font-size: 3rem;
+  }
+  
+  .conveyor-card {
+    width: 320px;
+    height: 240px;
+  }
+  
+  .series-label {
+    padding-left: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .page2 {
+    padding: 4rem 0 2rem;
+  }
+  
+  .page2-title {
+    font-size: 2.5rem;
+  }
+  
+  .page2-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .conveyor-card {
+    width: 280px;
+    height: 210px;
+  }
+  
+  .conveyor-track {
+    gap: 1.5rem;
+  }
+  
+  .series-label {
+    font-size: 1.3rem;
+    padding-left: 1rem;
+  }
+  
+  .modal-content {
+    max-width: 95%;
+    margin: 1rem;
+  }
+  
+  .modal-body {
+    padding: 2rem;
+  }
+  
+  .modal-content-wrapper {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .thumbnail-gallery {
+    width: 100%;
+    height: auto;
+  }
+  
+  .thumbnail-track {
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  
+  .thumbnail-item {
+    flex: 0 0 auto;
+  }
+  
+  .modal-nav {
+    font-size: 2.5rem;
+  }
+  
+  .modal-nav-prev {
+    left: 1rem;
+  }
+  
+  .modal-nav-next {
+    right: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page2 {
+    padding: 3rem 0 1.5rem;
+  }
+  
+  .page2-title {
+    font-size: 2rem;
+  }
+  
+  .page2-subtitle {
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+  }
+  
+  .conveyor-card {
+    width: 240px;
+    height: 180px;
+  }
+  
+  .conveyor-track {
+    gap: 1rem;
+  }
+  
+  .series-label {
+    font-size: 1.1rem;
+    padding-left: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .conveyor-container {
+    gap: 2rem;
+  }
+  
+  .modal-overlay {
+    padding: 0.5rem;
+  }
+  
+  .modal-content {
+    border-radius: 1rem;
+    max-height: 95vh;
+  }
+  
+  .modal-body {
+    padding: 1.5rem;
+  }
+  
+  .modal-close {
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+  
+  .modal-viewer-section {
+    min-height: 250px;
+  }
+  
+  .modal-3d-viewer,
+  .modal-video,
+  .modal-image {
+    min-height: 250px;
+  }
+  
+  .thumbnail-item,
+  .thumbnail-3d,
+  .thumbnail-video,
+  .thumbnail-image {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .thumbnail-title {
+    font-size: 0.6rem;
+    padding: 0.3rem 0.2rem;
+  }
+  
+  .modal-info h2 {
+    font-size: 1.3rem;
+  }
+  
+  .modal-info p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .conveyor-card {
+    width: 200px;
+    height: 150px;
+  }
+  
+  .page2-title {
+    font-size: 1.8rem;
+  }
+  
+  .series-label {
+    font-size: 1rem;
+  }
+  
+  .modal-body {
+    padding: 1rem;
+  }
+  
+  .modal-viewer-section {
+    min-height: 200px;
+  }
+  
+  .modal-3d-viewer,
+  .modal-video,
+  .modal-image {
+    min-height: 200px;
+  }
+  
+  .thumbnail-item,
+  .thumbnail-3d,
+  .thumbnail-video,
+  .thumbnail-image {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .page2 {
+    padding: 3rem 0;
+  }
+  
+  .page2-header {
+    margin-bottom: 2rem;
+  }
+  
+  .conveyor-card {
+    width: 200px;
+    height: 150px;
+  }
+  
+  .modal-content {
+    max-height: 85vh;
+  }
+  
+  .modal-viewer-section {
+    min-height: 200px;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .conveyor-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  
+  .conveyor-card:active {
+    transform: scale(0.95);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+  }
+  
+  .light-mode .conveyor-card:active {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .conveyor-card:hover .card-title-overlay {
+    transform: translateY(100%);
+  }
+  
+  .conveyor-card:active .card-title-overlay {
+    transform: translateY(0);
+  }
+  
+  .conveyor-row {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .conveyor-track {
+    animation: none;
+    padding: 0 1rem;
+  }
+  
+  .conveyor-row::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .conveyor-row {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

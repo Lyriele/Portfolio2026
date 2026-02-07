@@ -160,3 +160,131 @@
     margin-top: 60px;
   }
 }
+
+/* ----------------- MOBILE RESPONSIVE ------------------ */
+
+@media (max-width: 1024px) {
+  .fisheye-grid {
+    grid-template-columns: repeat(4, 280px);
+    grid-auto-rows: 280px;
+    gap: 1.5rem;
+  }
+
+  .fisheye img,
+  .fisheye-video {
+    width: 280px;
+    height: 280px;
+  }
+
+  .fisheye:not(.center-item):nth-child(4n+2),
+  .fisheye:not(.center-item):nth-child(4n+3) {
+    margin-top: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page1 {
+    height: auto;
+    min-height: 100vh;
+    padding: 2rem 0;
+  }
+  
+  .fisheye-grid {
+    grid-template-columns: repeat(3, 200px);
+    grid-auto-rows: 200px;
+    gap: 1rem;
+  }
+
+  .fisheye img,
+  .fisheye-video {
+    width: 200px;
+    height: 200px;
+  }
+
+  .fisheye:not(.center-item):nth-child(3n+2) {
+    margin-top: 100px;
+  }
+  
+  .fisheye:not(.center-item):nth-child(5n+4) {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .fisheye-grid {
+    grid-template-columns: repeat(2, 150px);
+    grid-auto-rows: 150px;
+    gap: 0.8rem;
+  }
+
+  .fisheye img,
+  .fisheye-video {
+    width: 150px;
+    height: 150px;
+  }
+
+  .fisheye:not(.center-item):nth-child(n) {
+    margin-top: 0 !important;
+  }
+  
+  .fisheye-grid {
+    row-gap: 1.5rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .fisheye-grid {
+    grid-template-columns: repeat(2, 130px);
+    grid-auto-rows: 130px;
+    gap: 0.6rem;
+  }
+
+  .fisheye img,
+  .fisheye-video {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .page1 {
+    padding: 4rem 0;
+  }
+  
+  .fisheye-grid {
+    grid-template-columns: repeat(5, 120px);
+    grid-auto-rows: 120px;
+    gap: 0.5rem;
+  }
+  
+  .fisheye img,
+  .fisheye-video {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .fisheye:not(.center-item):nth-child(5n+2),
+  .fisheye:not(.center-item):nth-child(5n+4) {
+    margin-top: 60px;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .fisheye:hover img {
+    transform: none;
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .fisheye:hover .glow-effect {
+    opacity: 0;
+  }
+  
+  .fisheye:active img {
+    transform: scale(0.95);
+    border-color: rgba(96, 165, 250, 0.6);
+  }
+  
+  .fisheye:active .glow-effect {
+    opacity: 0.4;
+  }
+}

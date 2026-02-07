@@ -8,6 +8,48 @@ import "./App.css";
 export default function App() {
   const [activeSection, setActiveSection] = useState('home');
   const [isLightMode, setIsLightMode] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileView, setIsMobileView] = useState(false);
+
+  // Check if mobile view on mount and resize
+  useEffect(() => {
+    const checkMobileView = () => {
+      setIsMobileView(window.innerWidth <= 480);
+    };
+    
+    checkMobileView();
+    window.addEventListener('resize', checkMobileView);
+    
+    return () => {
+      window.removeEventListener('resize', checkMobileView);
+    };
+  }, []);
+
+  // Close mobile menu when resizing to desktop
+  useEffect(() => {
+    if (!isMobileView && isMobileMenuOpen) {
+      setIsMobileMenuOpen(false);
+    }
+  }, [isMobileView, isMobileMenuOpen]);
+
+  // Close mobile menu when clicking outside on mobile
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isMobileView && isMobileMenuOpen) {
+        const nav = document.querySelector('.navigation');
+        const toggle = document.querySelector('.mobile-menu-toggle');
+        
+        if (nav && toggle && !nav.contains(event.target) && !toggle.contains(event.target)) {
+          setIsMobileMenuOpen(false);
+        }
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [isMobileView, isMobileMenuOpen]);
 
   useEffect(() => {
     // Apply the class to html and body
@@ -55,6 +97,9 @@ export default function App() {
 
   const scrollToSection = (id) => {
     setActiveSection(id);
+    if (isMobileView) {
+      setIsMobileMenuOpen(false);
+    }
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -62,31 +107,53 @@ export default function App() {
     setIsLightMode(!isLightMode);
   };
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <div className="app">
+      {/* Mobile Menu Toggle (Hamburger) */}
+      {isMobileView && (
+        <button
+          className={`mobile-menu-toggle ${isMobileMenuOpen ? 'open' : ''}`}
+          onClick={toggleMobileMenu}
+          aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMobileMenuOpen}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      )}
+
       {/* Navigation */}
-      <nav className="navigation">
+      <nav className={`navigation ${isMobileView ? (isMobileMenuOpen ? 'mobile-visible' : 'mobile-hidden') : ''}`}>
         <button
           onClick={() => scrollToSection('home')}
           className={activeSection === 'home' ? 'active' : ''}
+          data-short="H"
         >
           Home
         </button>
         <button
           onClick={() => scrollToSection('designs')}
           className={activeSection === 'designs' ? 'active' : ''}
+          data-short="D"
         >
           Designs
         </button>
         <button
           onClick={() => scrollToSection('projects')}
           className={activeSection === 'projects' ? 'active' : ''}
+          data-short="P"
         >
           Projects
         </button>
         <button
           onClick={() => scrollToSection('about')}
           className={activeSection === 'about' ? 'active' : ''}
+          data-short="A"
         >
           About
         </button>
