@@ -551,3 +551,42 @@
     transform: scale(1.2);
   }
 }
+
+.page3-nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: white; 
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity 0.3s, scale 0.2s;
+  padding: 10px;
+}
+
+.page3-nav-arrow:hover {
+  scale: 1.2;
+}
+
+.page3-nav-arrow:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.left { left: 10px; }
+.right { right: 10px; }
+
+.page3-progress-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 0 8px;
+  transition: all 0.3s ease;
+}
+
+.page3-progress-dot.active {
+  background: white;
+  transform: scale(1.2);
+}

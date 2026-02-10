@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useGLTF, OrbitControls } from '@react-three/drei';
 import VanillaTilt from 'vanilla-tilt';
@@ -12,9 +12,10 @@ function FloatingModel({ url }) {
 
   useFrame((state, delta) => {
     clock.current += delta;
-    // Bob up and down
-    ref.current.position.y = 0.05 * Math.sin(clock.current * 1);
-    ref.current.rotation.y = 0.5 * Math.sin(clock.current * 0.5); 
+    if (ref.current) {
+      ref.current.position.y = 0.05 * Math.sin(clock.current * 1);
+      ref.current.rotation.y = 0.5 * Math.sin(clock.current * 0.5);
+    }
   });
 
   return <primitive ref={ref} object={scene} scale={0.9} />;
@@ -63,6 +64,16 @@ export default function Page3() {
     }, 400);
   };
 
+  const handleNext = () => {
+    const nextIndex = (currentProject + 1) % projects.length;
+    handleProjectChange(nextIndex);
+  };
+
+  const handlePrev = () => {
+    const prevIndex = (currentProject - 1 + projects.length) % projects.length;
+    handleProjectChange(prevIndex);
+  };
+
   useEffect(() => {
     if (tiltRef.current && !isTransitioning) {
       VanillaTilt.init(tiltRef.current, {
@@ -79,6 +90,30 @@ export default function Page3() {
 
   return (
     <div className="page3-container">
+      
+      {/* NAVIGATION ARROWS */}
+      <button 
+        className="page3-nav-arrow left" 
+        onClick={handlePrev} 
+        disabled={isTransitioning}
+        aria-label="Previous Project"
+      >
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+
+      <button 
+        className="page3-nav-arrow right" 
+        onClick={handleNext} 
+        disabled={isTransitioning}
+        aria-label="Next Project"
+      >
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+
       <div className={`page3-content ${isTransitioning ? 'transitioning' : ''}`}>
 
         {/* LEFT SIDE */}
@@ -98,13 +133,14 @@ export default function Page3() {
             gl={{ alpha: true, antialias: true }}
             style={{ background: 'transparent' }}
           >
-            {/* Lighting */}
             <ambientLight intensity={1.5} />
             <directionalLight position={[10, 15, 10]} intensity={2} />
             <pointLight position={[-10, 10, -10]} intensity={1.2} />
             <pointLight position={[10, -10, 10]} intensity={1.2} />
 
-            <FloatingModel url={currentProjectData.modelUrl} />
+            <Suspense fallback={null}>
+               <FloatingModel url={currentProjectData.modelUrl} />
+            </Suspense>
 
             <OrbitControls
               enableZoom={false}
@@ -118,32 +154,30 @@ export default function Page3() {
         {/* RIGHT SIDE */}
         <div className="page3-right">
           <p className="page3-description">{currentProjectData.description}</p>
-          <a
-            href={currentProjectData.websiteUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="page3-website-link"
-          >
-            Visit Website
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-              <polyline points="15 3 21 3 21 9"></polyline>
-              <line x1="10" y1="14" x2="21" y2="3"></line>
-            </svg>
-          </a>
+          {currentProjectData.websiteUrl && (
+            <a
+              href={currentProjectData.websiteUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="page3-website-link"
+            >
+              Visit Website
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+          )}
         </div>
-
       </div>
 
-      {/* PROGRESS DOTS */}
+      {/* PROGRESS INDICATORS (Keep dots, but arrows are main nav) */}
       <div className="page3-progress-bar">
         {projects.map((p, index) => (
-          <button
+          <div
             key={p.id}
             className={`page3-progress-dot ${index === currentProject ? 'active' : ''}`}
-            onClick={() => handleProjectChange(index)}
-            aria-label={`Go to ${p.name}`}
-            disabled={isTransitioning}
           />
         ))}
       </div>
