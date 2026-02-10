@@ -31,7 +31,7 @@ export default function App() {
     
     const observerOptions = {
       root: null,
-      rootMargin: '-25% 0px -45% 0px', // Triggers when section hits the upper middle
+      rootMargin: '-25% 0px -45% 0px', 
       threshold: 0
     };
 
